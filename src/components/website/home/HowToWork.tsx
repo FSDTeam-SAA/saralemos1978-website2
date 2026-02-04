@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const HowToWork = () => {
   return (
-    <section className="my-12 md:my-16">
+    <section className="my-12 md:my-16" id='how-it-work'>
       <div className="container  mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <span className="mb-4 inline-block rounded-2xl bg-[#ECFECD] px-5 py-2 text-sm font-medium text-[#65A30D]">

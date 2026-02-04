@@ -116,3 +116,13 @@ export async function Payment(userId:string,planId:string) {
     }
   }
 } 
+export async function postAskForHelp(data: { issue: string; description: string; email: string }) {
+  try {
+    const res = await api.post("/contact", data);
+    return res.data;
+  } catch (err) {
+    if (err instanceof Error) {
+      throw new Error(err.message || "Fail to send contact request");
+    }
+  }
+}

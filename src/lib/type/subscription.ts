@@ -14,6 +14,8 @@ export interface SubscriptionPlan {
   tagline?: string;
   cta?: string;
   period?: string;
+  allowedListings?:string;
+
 }
 
 export interface ApiResponse {

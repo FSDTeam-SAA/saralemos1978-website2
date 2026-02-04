@@ -20,6 +20,7 @@ const Subscriptioncard = ({
     features = [],
     featured = false,
     popular = false,
+    allowedListings,
   } = plan;
 
   return (
@@ -57,7 +58,8 @@ const Subscriptioncard = ({
         `}
         >
           <h3 className={`text-2xl leading-[120%] font-semibold mb-1 ${featured ? ' text-[#3D483F]':'text-white'}`}>{name}</h3>
-          <p className={`text-base leading-[150%] font-normal mb-5 ${featured ? ' text-[#3D483F]':'text-white'}`}>{tagline}</p>
+          <p className={`text-base leading-[150%] font-normal mb-4 ${featured ? ' text-[#3D483F]':'text-white'}`}>{tagline}</p>
+
 
           {/* Price Section */}
           <div className="mb-6">
@@ -100,6 +102,8 @@ const Subscriptioncard = ({
         {/* Features List */}
         <div className="p-8 flex-grow">
           <div className="space-y-4">
+          {/* <p className={`text-2xl font-bold leading-[150%]  mb-3 ${featured ? ' text-[#3D483F]':'text-white'}`}> <span className="">AllowedListings:</span>  {allowedListings}</p> */}
+
             {features.map((feature, index) => (
               <div key={index} className="flex items-start">
                 <div

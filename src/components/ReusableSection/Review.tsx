@@ -81,7 +81,7 @@ export default function Review() {
   const cardWidth = `calc((100% - ${(itemsPerView - 1) * 24}px) / ${itemsPerView})`;
 
   return (
-    <section className="relative w-full py-16 px-4 text-center">
+    <section className="relative w-full py-16 px-4 text-center" id="show-case">
       {/* Background image */}
       {/* <div className="absolute inset-0 z-0">
         <Image
