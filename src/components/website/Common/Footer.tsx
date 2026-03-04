@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0E2F62] text-white py-16">
+    <footer id="footers" className="bg-[#0E2F62] text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-4 border-b border-gray-700 pb-12 mb-8">
@@ -54,8 +54,8 @@ const Footer = () => {
               {[
                 { name: "Charter", href: "/#charter-thailand" },
                 { name: "Contact", href: "/#contact" },
-                { name: "Privacy Policy", href: "/privacy-policy" },
-                { name: "Terms & Conditions", href: "/terms-conditions" },
+                // { name: "Privacy Policy", href: "/privacy-policy" },
+                // { name: "Terms & Conditions", href: "/terms-conditions" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -78,19 +78,19 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <span className="text-orange-500 flex-shrink-0">✉</span>
                 <a
-                  href="mailto:support@yacht.com"
+                  href="mailto:martin.holmes@northropandjohnson.com"
                   className="text-white/70 hover:text-white"
                 >
-                  support@yacht.com
+                  martin.holmes@northropandjohnson.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-orange-500 flex-shrink-0">📞</span>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+66818917057"
                   className="text-white/70 hover:text-white"
                 >
-                  +1 (555) 4567890
+                  +66 81 891 7057
                 </a>
               </li>
               <li className="flex items-start gap-2">

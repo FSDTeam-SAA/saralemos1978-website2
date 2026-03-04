@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+'use client';
+
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutHero = () => {
@@ -34,28 +35,28 @@ const AboutHero = () => {
             </p>
 
             <div className="mt-8 flex justify-center items-center gap-4">
-              <a
-                href="#"
+              <button
+                onClick={() => window.open("https://wa.me/66818917057", "_blank")}
                 className=" bg-white px-8 py-4 text-[#343A40] font-semibold transition hover:bg-[#B5ED5B] rounded-4xl flex items-center"
               >
                 <span>Call Me</span> 
-              </a>
+              </button>
              <span className="text-white">Or</span>
 
-              <a
-                href="#"
+              <Link
+                href="/#footers"
                 className=" border  px-8 py-4  bg-[#F8F7F3] font-semibold transition rounded-4xl flex items-center"
               >
                 Email Me
-              </a>
+              </Link>
             </div>
             <div className="flex justify-center my-15">
 
               <Image className="rounded-full w-50 h-50 object-cover"  src={'/about/martinf.png'} alt="f........."  width={200} height={200}/>
             </div>
-            <Button className=" py-6 px-8! bg-[#E8662A]">
+            <Link href={'/#about-holmes'} className=" py-2 px-8! bg-[#E8662A]">
               About Me
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
