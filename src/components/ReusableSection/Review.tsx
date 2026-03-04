@@ -12,44 +12,40 @@ export default function Review() {
     text: string;
     rating: number;
   }[] = [
-    // {
-    //   name: "P.S.",
-    //   text: `“What a joy it’s been working with Madeline! She’s absolutely wonderful! She’s super kind, patient, and really knows what she’s doing. From the first day, she made me feel comfortable and cared for. I never felt silly just supported! Madeline not only listens to me but has actively helped me to feel great while always smiling with gentle words of encouragement! I would recommend Dr. May to anyone looking for a wonderful physical therapist!”`,
-    //   rating: 5,
-    // },
-    // {
-    //   name: "L.S.",
-    //   text: `“I met with Kevin after I broke my ankle. He was kind, conscientious, and very helpful. His breadth of knowledge and experience is evident in the way He explains any exercises, the need for specific movements, and why long-term they are important. I highly recommend him to others, and credit Lolo Physical Therapy with their attention to detail. Because of them, I've regained my mobility and strength.”`,
-    //   rating: 5,
-    // },
-    // {
-    //   name: "K.M.",
-    //   text: `“They truly care about each patient. The care is always very kind and compassionate. I've been to a lot of PT and this has been my best experience.”`,
-    //   rating: 5,
-    // },
-    // {
-    //   name: "M.G.",
-    //   location: "Los Angeles, CA",
-    //   text: `“Went in for a few visits with Madeline to fix my plantar faciitis. In the first ten minutes, she identified the root cause for the injury which I never would have thought as a contributor. During the consults she wrote down the home exercises in a way I could understand which helped me ensure I was doing them correctly. Its always worth the travel time to see Madeline. Its nice to feel like you're working with a PT whose goal is to treat patients not increase profits.”`,
-    //   rating: 5,
-    // },
     {
-      name: "M.G.",
-      location: "Los Angeles, CA",
-      text: `“Went in for a few visits with Madeline to with a PT whose goal is to treat patients not increase profits.”`,
+      name: "R.C.",
+      location: "Switzerland",
+      text: `"I enjoyed pertinent reporting of all efforts along with skilf..."`,
       rating: 5,
+      image: "/images/testimonial1.webp",
     },
     {
-      name: "M.G.",
-      location: "Los Angeles, CA",
-      text: `“Went in for a few visits with Madeline to fix my plantar faciiti me ensure I was doing them correctly. Its always worth the travel time to see Madeline. Its nice to feel like you're working with a PT whose goal is to treat patients not increase profits.”`,
+      name: "M.K.",
+      location: "Thailand",
+      text: `"Martins character, tenacity, diplomacy and genuine de..."`,
       rating: 5,
+      image: "/images/testimonial3.webp",
     },
     {
-      name: "M.G.",
-      location: "Los Angeles, CA",
-      text: `“Went in for a few visits with Madeline t ay I could understand which helped me ensure I was doing them correctly. Its always worth the travel time to see Madeline. Its nice to feel like you're working with a PT whose goal is to treat patients not increase profits.”`,
+      name: "J.S.",
+      location: "Australia",
+      text: `"It was his extensive knowledge of the industry t..."`,
       rating: 5,
+      image: "/images/testimonial2.webp",
+    },
+    {
+      name: "G.L.",
+      location: "Australia",
+      text: `"His commitment truly sets him apart. Nothing was too..."`,
+      rating: 5,
+      image: "/images/testimonial1.webp",
+    },
+    {
+      name: "L.A.",
+      location: "Canada",
+      text: `"Thanks so much for all you did to pull the deal together..."`,
+      rating: 5,
+      image: "/images/testimonial3.webp",
     },
   ];
 
@@ -96,127 +92,126 @@ export default function Review() {
       </div> */}
 
       {/* Content */}
-      <div className="relative z-10 container  text-start mx-auto">
-        <span  className="bg-[#ECFECD] text-[#65A30D] px-4 py-2 rounded-full ">Testimonials</span>
-        <h2 className="text-3xl font-semibold text-white mb-2 mt-2">
-          <span className="text-[#2E266D]">Loved</span>{" "}
-          <span className="text-[#B5ED5B]">By Industry</span>{" "}
-          <span className="text-[#2E266D]">Professionals</span>
-        </h2>
-        <p className="text-[#5D665E] vmb-10 max-w-2xl  text-start mb-8">
-          See what leading yacht brokers and dealers have to say about YachtAI
-        </p>
+      <div className="relative z-10 container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-3">
+            <span className="text-gray-800">Client </span>
+            <span className="text-orange-500">Testimonials</span>
+          </h2>
+          <p className="text-gray-600 text-base">
+            Trusted by clients across Asia-Pacific for exceptional service and
+            results
+          </p>
+        </div>
 
         {/* Slider */}
-        <div className="relative overflow-hidden">
-          <div
-            className="flex gap-6"
-            style={{
-              transform: `translateX(calc(-${(currentIndex * 100) / itemsPerView}% - ${currentIndex * 24}px))`,
-              transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
-            }}
-          >
-            {testimonials.map((t, i) => (
-              <Card
-                key={i}
-                className="shrink-0 bg-[#5A50F5] py-0 rounded-2xl shadow-md border my-3 border-gray-100 hover:shadow-sm transition-all duration-300"
-                style={{ width: cardWidth }}
-              >
-                <CardContent className="px-6 pt-6 text-left flex flex-col h-full justify-start">
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-1">
+        <div className="relative flex items-center justify-center">
+          <div className="relative w-full overflow-hidden">
+            <div
+              className="flex gap-6"
+              style={{
+                transform: `translateX(calc(-${(currentIndex * 100) / itemsPerView}% - ${currentIndex * 24}px))`,
+                transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+              }}
+            >
+              {testimonials.map((t, i) => (
+                <Card
+                  key={i}
+                  className="shrink-0 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+                  style={{ width: cardWidth }}
+                >
+                  <CardContent className="px-6 py-6 text-left flex flex-col h-full justify-between">
+                    <div className="flex items-center gap-3 mb-3">
+                      {t.image ? (
+                        <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                          <Image
+                            src={t.image}
+                            alt={t.name}
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-center w-12 h-12 bg-gray-400 text-white rounded-full font-medium text-xs flex-shrink-0">
+                          {t.name?.charAt(0).toUpperCase()}
+                        </div>
+                      )}
+                      <div>
+                        <p className="font-semibold text-gray-800 text-sm">
+                          {t.name}
+                        </p>
+                        {t.location && (
+                          <p className="text-xs text-gray-500">{t.location}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        {t.text}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-0.5 mt-4">
                       {[...Array(5)].map((_, idx) => (
                         <Star
                           key={idx}
-                          size={16}
+                          size={14}
                           className={`${
                             idx < t.rating
-                              ? "text-[#B5ED5B] fill-[#B5ED5B]"
-                              : "text-gray-300"
-                          } transition-all duration-200`}
+                              ? "text-yellow-400 fill-yellow-400"
+                              : "text-gray-300 fill-gray-300"
+                          }`}
                         />
                       ))}
                     </div>
-                  </div>
-
-                  <p className="text-white italic text-sm leading-relaxed">
-                    {t.text}
-                  </p>
-
-                  <div className="flex items-center gap-3 mt-5 mb-4">
-                    {t.image ? (
-                      <Image
-                        src={t.image}
-                        alt={t.name}
-                        width={48}
-                        height={48}
-                        className="rounded-full object-cover"
-                      />
-                    ) : (
-                      <div className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full font-medium text-sm">
-                        {t.name?.charAt(0).toUpperCase()}
-                      </div>
-                    )}
-                    <div>
-                      <p className="font-semibold text-white">{t.name}</p>
-                      {t.location && (
-                        <p className="text-sm text-white">{t.location}</p>
-                      )}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full transition-all duration-200 z-10 ${
+              currentIndex === 0
+                ? "opacity-40 cursor-not-allowed bg-gray-300"
+                : "opacity-100 hover:opacity-100 cursor-pointer bg-orange-500 shadow-lg hover:shadow-xl hover:scale-110"
+            }`}
+          >
+            <span className="text-white text-xl font-bold">‹</span>
+          </button>
+
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === maxIndex}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full transition-all duration-200 z-10 ${
+              currentIndex === maxIndex
+                ? "opacity-40 cursor-not-allowed bg-gray-300"
+                : "opacity-100 hover:opacity-100 cursor-pointer bg-orange-500 shadow-lg hover:shadow-xl hover:scale-110"
+            }`}
+          >
+            <span className="text-white text-xl font-bold">›</span>
+          </button>
         </div>
 
-        {/* Navigation */}
-        {/* <div className="flex items-center justify-center gap-4 ">
-          <Button
-            onClick={handlePrev}
-            size="icon"
-            variant="ghost"
-            disabled={currentIndex === 0}
-            className={`rounded-full w-10 h-10 transition-all duration-200 hover:scale-110 ${
-              currentIndex === 0
-                ? "opacity-40 cursor-not-allowed"
-                : "hover:bg-gray-100 cursor-pointer"
-            }`}
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </Button>
-
-          <div className="flex gap-2">
-            {testimonials.map((_, idx) => {
-              const isActive =
-                idx >= currentIndex && idx < currentIndex + itemsPerView;
-              return (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentIndex(Math.min(idx, maxIndex))}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    isActive ? "bg-gray-900 w-8" : "bg-gray-300 w-2.5"
-                  }`}
-                ></button>
-              );
-            })}
-          </div>
-
-          <Button
-            onClick={handleNext}
-            size="icon"
-            variant="ghost"
-            disabled={currentIndex === maxIndex}
-            className={`rounded-full w-10 h-10 transition-all duration-200 hover:scale-110 ${
-              currentIndex === maxIndex
-                ? "opacity-40 cursor-not-allowed"
-                : "hover:bg-gray-100 cursor-pointer"
-            }`}
-          >
-            <ChevronRight className="w-5 h-5" />
-          </Button>
-        </div> */}
+        {/* Pagination Dots */}
+        <div className="flex items-center justify-center gap-3 mt-8">
+          {testimonials.map((_, idx) => {
+            const isActive =
+              idx >= currentIndex && idx < currentIndex + itemsPerView;
+            return (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(Math.min(idx, maxIndex))}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  isActive ? "bg-orange-500 w-8" : "bg-gray-300 w-2"
+                }`}
+              ></button>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

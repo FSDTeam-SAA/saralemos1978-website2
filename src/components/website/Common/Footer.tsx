@@ -1,50 +1,45 @@
 import React from "react";
 import Link from "next/link";
-import { Facebook, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C2668] text-white py-10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-0">
+    <footer className="bg-[#0E2F62] text-white py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 border-b border-gray-700 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-4 border-b border-gray-700 pb-12 mb-8">
           {/* Left Column - Brand & Description */}
           <div className="space-y-4">
-            <Image
-              src={"/images/logo.svg"}
-              alt="logo"
-              width={140}
-              height={140}
-              className=" object-cover"
-            />
-
-            <p className="text-white/80 leading-relaxed max-w-md">
-              Active surveillance testing or detecting cases and providing the
-              necessary information to the relevant authorities for timely
-              action.
+            <h3 className="text-2xl font-bold text-orange-500">
+              MARTIN HOLMES
+            </h3>
+            <p className="text-white/70  leading-relaxed">
+              An experienced yacht broker with a background at Lee Marine and
+              Northrop & Johnson, trusted for his knowledge of luxury yacht
+              sales across Thailand and international markets. His hands-on
+              approach, strong relationships, and deep industry insight guide
+              clients from first enquiry to final deal.
             </p>
           </div>
 
-          {/* Company Links */}
+          {/* Quick Links */}
           <div>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-2 ">
-              Company
-            </h2>
-            <ul className="space-y-3">
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
               {[
                 { name: "Home", href: "/" },
-                { name: "Features", href: "/about" },
-                { name: "Pricing", href: "/#pricing" },
-                { name: "", href: "#" },
+                { name: "About", href: "/#about-holmes" },
+                { name: "Services", href: "/#showcase" },
+                { name: "Listings", href: "/#listings" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
-                    aria-label={`Navigate to ${link.name}`}
+                    className="text-white/70 hover:text-white  transition-colors duration-300"
                   >
-                    <span className="w-1 h-1 bg-blue-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -52,49 +47,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support Links */}
+          {/* Resources */}
           <div>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-2 ">
-              Support
-            </h2>
-            <ul className="space-y-3">
+            <h4 className="text-xl font-semibold text-white mb-4">Resources</h4>
+            <ul className="space-y-2">
               {[
-                { name: "Help Center", href: "/#help-center" },
-                { name: "Contact", href: "#" },
-                { name: "FAQ", href: "#" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
-                    aria-label={`Navigate to ${link.name}`}
-                  >
-                    <span className="w-1 h-1 bg-green-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h2 className="text-lg font-semibold text-white mb-4 pb-2 ">
-              Legal
-            </h2>
-            <ul className="space-y-3">
-              {[
+                { name: "Charter", href: "/#charter-thailand" },
+                { name: "Contact", href: "/#contact" },
                 { name: "Privacy Policy", href: "/privacy-policy" },
-                { name: "Terms & Conditions", href: "/privacy-policy" },
-                // { name: "Security", href: "/#" },
+                { name: "Terms & Conditions", href: "/terms-conditions" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group"
-                    aria-label={`Navigate to ${link.name}`}
+                    className="text-white/70 hover:text-white  transition-colors duration-300"
                   >
-                    <span className="w-1 h-1 bg-purple-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -102,22 +69,60 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Subscription & Social Links */}
-          <div className="space-y-6">
+          {/* Contact Us */}
+          <div>
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Contact Us
+            </h4>
+            <ul className="space-y-2 ">
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 flex-shrink-0">✉</span>
+                <a
+                  href="mailto:support@yacht.com"
+                  className="text-white/70 hover:text-white"
+                >
+                  support@yacht.com
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 flex-shrink-0">📞</span>
+                <a
+                  href="tel:+1234567890"
+                  className="text-white/70 hover:text-white"
+                >
+                  +1 (555) 4567890
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 flex-shrink-0">📍</span>
+                <span className="text-white/70">
+                  123 Care Street, City,
+                  <br />
+                  State, ZIP
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter & Social */}
+          <div className="space-y-4">
             <div>
-              <p className="text-white/80 text-sm mb-4 ">
-               Subscribe for updates & news
+              <h4 className="text-xl font-semibold text-white mb-1">
+                Newsletter
+              </h4>
+              <p className="text-white/70  mb-3">
+                Subscribe for updates & news
               </p>
-              <form className="flex flex-col sm:flex-row gap-2">
+              <form className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-grow px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-white/50 text-xs focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   aria-label="Email address for subscription"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#5A50F5] hover:bg-blue-800  cursor-pointer  text-white font-semibold rounded-lg transition-colors duration-300 whitespace-nowrap"
+                  className="px-4 py-2 bg-white text-[#0E2F62] font-semibold rounded text-xs hover:bg-gray-100 cursor-pointer transition-colors duration-300 whitespace-nowrap"
                   aria-label="Subscribe to newsletter"
                 >
                   Subscribe
@@ -125,33 +130,43 @@ const Footer = () => {
               </form>
             </div>
 
-            {/* Social Links with Icons */}
-            <div className="pt-2">
-              <div className="flex space-x-4">
-                <Link
-                  href="#"
-                  className="bg-[#5A50F5] p-3 rounded-2xl text-white hover:bg-blue-700 transition-colors duration-300"
-                  aria-label="Follow us on Facebook"
-                >
-                  <Facebook className="w-7 h-7" />
-                </Link>
-                <Link
-                  href="#"
-                  className="bg-[#5A50F5] p-3 rounded-2xl text-white hover:bg-blue-800 transition-colors duration-300"
-                  aria-label="Follow us on LinkedIn"
-                >
-                  <Linkedin className="w-7 h-7" />
-                </Link>
-                <Link
-                  href="#"
-                  className="bg-[#5A50F5] p-3 rounded-2xl text-white hover:bg-[#5A50F5] transition-colors duration-300"
-                  aria-label="Follow us on Instagram"
-                >
-                  <Instagram className="w-7 h-7" />
-                </Link>
-              </div>
+            {/* Social Links */}
+            <div className="flex space-x-3 pt-2">
+              <Link
+                href="#"
+                className="text-white/70 bg-[#1A4D9C] p-2 hover:text-orange-500 transition-colors duration-300"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </Link>
+              <Link
+                href="#"
+                className="text-white/70 bg-[#1A4D9C] p-2 hover:text-orange-500 transition-colors duration-300"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link
+                href="#"
+                className="text-white/70 bg-[#1A4D9C] p-2 hover:text-orange-500 transition-colors duration-300"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </Link>
+              <Link
+                href="#"
+                className="text-white/70 bg-[#1A4D9C] p-2 hover:text-orange-500 transition-colors duration-300"
+                aria-label="Follow us on Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </Link>
             </div>
           </div>
+        </div>
+
+        {/* Bottom Copyright */}
+        <div className="text-center text-white/60 text-xs">
+          <p>© 2025 yacht AI. All rights reserved</p>
         </div>
       </div>
     </footer>

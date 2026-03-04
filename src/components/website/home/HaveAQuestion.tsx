@@ -6,9 +6,10 @@ const HaveAQuestion = () => {
     <section className="my-10 md:my-16" id="contact">
       <div className="container mx-auto">
         <HaveQuestion
-          title="Have a"
+          title="Still Have "
           span="Question?"
-          description="Our team is here to help you with any inquiries you may have. Feel free to reach out anytime."
+          description="Ready to discuss your yacht or start planning your next move?
+I’m always available for a conversation and happy to offer straightforward, practical advice."
           buttonText="Contact Us"
         />
       </div>

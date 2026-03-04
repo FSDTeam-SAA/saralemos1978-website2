@@ -2,7 +2,9 @@ import React from 'react'
 
 const CharterInThailand = () => {
   return (
-         <section className="py-16 px-4 sm:px-6 lg:px-8">
+         <section className="py-16 px-4 sm:px-6 lg:px-8"
+         id="charter-thailand"
+         >
         <div className="max-w-7xl mx-auto">
           <div className="flex gap-8 items-center">
             <div className="w-[60%]">

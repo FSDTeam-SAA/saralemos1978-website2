@@ -141,7 +141,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <Button
               type="submit"
               disabled={isPending}
-              className="flex-1 h-12 bg-[#65A30D] hover:bg-[#52840b] text-white rounded-xl font-semibold transition-all"
+              className="flex-1 h-12 bg-orange-500 hover:bg-orange-600 cursor-pointer text-white rounded-xl font-semibold transition-all"
             >
               {isPending ? "Sending..." : "Submit Request"}
             </Button>

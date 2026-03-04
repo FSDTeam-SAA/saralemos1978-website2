@@ -3,7 +3,7 @@ import React from 'react'
 
 const AboutHolmes = () => {
   return (
-   <section className="py-16 px-4 sm:px-6 lg:px-8">
+   <section id="about-holmes" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex gap-8 items-center">
             {/* Image */}

@@ -37,6 +37,7 @@ const AboutFeatured = () => {
     <section
       className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50"
       aria-labelledby="featured-yachts-heading"
+      id="listings"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
