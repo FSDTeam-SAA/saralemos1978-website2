@@ -24,14 +24,14 @@ const AboutBrokerage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Image Gallery */}
-          <div className="grid grid-cols-4 gap-4">
-            <figure className="col-span-2 row-span-2 relative group">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 min-h-[320px]">
+            <figure className="col-span-2 row-span-2 relative group min-h-[200px] sm:min-h-[280px]">
               <Image
                 src="/about/brokerage.jpg"
                 alt="Luxury yacht deck lounge with sea view"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover rounded-lg"
               />
               <figcaption className="absolute bottom-0 left-0 right-0 rounded-md backdrop-blur-xl text-white text-sm text-center py-1 opacity-0 group-hover:opacity-100 transition">
@@ -45,12 +45,12 @@ const AboutBrokerage = () => {
               { src: "/about/brokerage2.jpg", label: "Open Deck Area" },
               { src: "/about/brokerage5.jpg", label: "Relaxation Space" },
             ].map((item, index) => (
-              <figure key={index} className="relative group">
+              <figure key={index} className="relative group min-h-[120px]">
                 <Image
                   src={item.src}
                   alt={item.label}
                   fill
-                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, 25vw"
                   className="object-cover rounded-lg"
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 rounded-md backdrop-blur-md text-white text-xs text-center py-1 opacity-0 group-hover:opacity-100 transition">
@@ -114,3 +114,4 @@ const AboutBrokerage = () => {
 };
 
 export default AboutBrokerage;
+

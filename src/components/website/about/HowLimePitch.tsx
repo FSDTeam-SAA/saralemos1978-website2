@@ -33,7 +33,7 @@ const features = [
 const HowLimePitch = () => {
   return (
     <section
-      className="relative my-10 md:my-16 container mx-auto py-16 px-4 sm:px-6 lg:px-8"
+      className="relative my-10 md:my-16 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
       aria-labelledby="limepitch-heading"
     >
       {/* Background Image */}
@@ -66,7 +66,7 @@ const HowLimePitch = () => {
         </header>
 
         {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {features.map((feature, index) => (
             <article
               key={index}

@@ -51,7 +51,7 @@ const AboutWhyWorkUs = () => {
         </header>
 
         {/* Reasons */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 ">
           {reasons.map((reason, index) => (
             <React.Fragment key={index}>
               <article className="text-center flex items-center justify-center gap-2">

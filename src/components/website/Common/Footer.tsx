@@ -8,7 +8,7 @@ const Footer = () => {
     <footer id="footers" className="bg-[#0E2F62] text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-4 border-b border-gray-700 pb-12 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-5 gap-6 lg:gap-4 border-b border-gray-700 pb-12 mb-8">
           {/* Left Column - Brand & Description */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-orange-500">
@@ -79,7 +79,7 @@ const Footer = () => {
                 <span className="text-orange-500 flex-shrink-0">✉</span>
                 <a
                   href="mailto:martin.holmes@northropandjohnson.com"
-                  className="text-white/70 hover:text-white"
+                  className="text-white/70 hover:text-white break-all"
                 >
                   martin.holmes@northropandjohnson.com
                 </a>
@@ -113,7 +113,7 @@ const Footer = () => {
               <p className="text-white/70  mb-3">
                 Subscribe for updates & news
               </p>
-              <form className="flex gap-2">
+              <form className="flex flex-wrap gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"

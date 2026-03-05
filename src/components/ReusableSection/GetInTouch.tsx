@@ -56,10 +56,10 @@ export default function GetInTouch() {
   }
 
   return (
-    <div className="bg-gray-50 py-10">
-      <div className="container mx-auto bg-white rounded-2xl shadow-sm grid grid-cols-1 md:grid-cols-2">
+    <div className="bg-gray-50 py-10 px-4 sm:px-6">
+      <div className="container mx-auto bg-white rounded-2xl shadow-sm grid grid-cols-1 md:grid-cols-2 overflow-hidden">
         {/* Left side: Image with gradient overlay */}
-        <div className="relative h-64 md:h-auto rounded-l-2xl overflow-hidden">
+        <div className="relative h-64 md:h-auto overflow-hidden">
           <Image
             src="/image/GetInTouch.png"
             alt="Contact Image"
@@ -67,11 +67,11 @@ export default function GetInTouch() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/20 rounded-l-2xl" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
 
         {/* Right side: Form */}
-        <div className="p-10">
+        <div className="p-6 sm:p-10">
           <h2
             className="text-xl font-bold mb-2"
             style={{ fontFamily: "var(--font-playfair)" }}

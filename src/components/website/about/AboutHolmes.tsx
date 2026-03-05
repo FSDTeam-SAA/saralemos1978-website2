@@ -5,14 +5,13 @@ const AboutHolmes = () => {
   return (
    <section id="about-holmes" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex gap-8 items-center">
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
             {/* Image */}
-            <div className="">
+            <div className="w-full lg:w-auto flex-shrink-0">
               <Image
                 src="/about/martin.jpg"
                 alt="Martin Holmes"
-                
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full lg:w-[626px] h-auto object-cover rounded-lg"
                 width={626}
                 height={375}
               />

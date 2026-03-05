@@ -19,7 +19,7 @@ const HaveQuestion = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col gap-4 items-center bg-white bg-[url('/images/BG.png')] bg-no-repeat bg-right bg-contain py-12 px-6 rounded-lg">
+    <div className="flex flex-col gap-4 items-center bg-white bg-[url('/images/BG.png')] bg-no-repeat bg-right bg-contain py-12 px-6 rounded-lg overflow-hidden w-full">
       <h2 className="font-bold text-3xl md:text-4xl leading-[150%] text-gray-800 text-center">
         {title} {span && <span className="text-gray-800">{span}</span>}
       </h2>
