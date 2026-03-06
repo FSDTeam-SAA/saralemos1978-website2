@@ -45,10 +45,10 @@ const AboutWhyWorkUs = () => {
           >
             Why Work <span className="text-orange-500">With Holmes On Board</span>
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-sm md:text-base text-gray-600">
+          {/* <p className="mt-3 max-w-2xl mx-auto text-sm md:text-base text-gray-600">
             Discover what sets Holmes On Board apart in yacht brokerage,
             representation, and advisory services.
-          </p>
+          </p> */}
         </header>
 
         {/* Reasons */}
