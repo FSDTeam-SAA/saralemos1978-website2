@@ -3,44 +3,45 @@ import React from "react";
 
 const reasons = [
   {
-    title: "Industry Expertise",
-    description:
-      "Over 15 years of experience in the Southeast Asian yacht industry with trusted regional insight.",
+    title: "Independent & transparent",
+    description: "No big-agency pressure. Just honest, expert advice.",
   },
   {
-    title: "Personalized Service",
+    title: "Asia-Pacific specialist",
     description:
-      "Every client receives tailored attention and expert guidance based on their individual goals.",
+      "Decades of on-water and commercial experience in Thailand and the region.",
   },
   {
-    title: "Strong Network",
+    title: "High-impact marketing",
     description:
-      "Extensive connections with yacht owners, charter operators, and key industry leaders.",
+      "Every listing benefits from strategic content, video, and social distribution.",
   },
   {
-    title: "Market Intelligence",
+    title: "Strong industry network",
     description:
-      "Up-to-date market data and pricing insights to secure competitive and informed deals.",
+      "From surveyors to shipyards, I work only with proven professionals.",
   },
   {
-    title: "Client-First Approach",
+    title: "ClieRelationship-driven",
     description:
-      "From first consultation to final transaction, your satisfaction is always the priority.",
+      "My clients stay for years; many have become friends.",
   },
 ];
 
 const AboutWhyWorkUs = () => {
   return (
     <section
-      className="py-16 px-4 sm:px-6 lg:px-8 border-t-4 border-orange-500"
+      className="py-16 px-4 sm:px-6 lg:px-0 "
       aria-labelledby="why-work-heading"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="container  mx-auto">
         {/* Section Header */}
         <header className="text-center mb-14">
+              <span className="block w-14 h-0.5 mx-auto bg-[#FF9002] mb-3" />
+
           <h2
             id="why-work-heading"
-            className="text-3xl md:text-4xl font-bold text-gray-800"
+            className="text-3xl md:text-4xl font-bold text-[#02323C]"
           >
             Why Work <span className="text-orange-500">With Holmes On Board</span>
           </h2>

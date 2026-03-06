@@ -39,9 +39,11 @@ const AboutFeatured = () => {
       aria-labelledby="featured-yachts-heading"
       id="listings"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="container  mx-auto">
         {/* Section Header */}
         <header className="mb-10">
+              <span className="block w-14 h-0.5 bg-[#FF9002] mb-3" />
+
           <h2
             id="featured-yachts-heading"
             className="text-3xl md:text-4xl font-bold text-gray-800"

@@ -31,7 +31,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
+
       // If at the very top, always set home as active
       if (window.scrollY < 100 && pathname === "/") {
         setActiveSection("home");
@@ -50,7 +50,7 @@ export default function Navbar() {
     const sectionIds = menuItems
       .filter((item) => item.id)
       .map((item) => item.id);
-    
+
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -66,7 +66,10 @@ export default function Navbar() {
       threshold: 0,
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
 
     sectionIds.forEach((id) => {
       const element = document.getElementById(id!);
@@ -78,43 +81,45 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [pathname]);
 
-  const getIsActive = (item: typeof menuItems[0]) => {
+  const getIsActive = (item: (typeof menuItems)[0]) => {
     // If we're on a different page, match by pathname only
     if (pathname !== "/") {
-      return pathname === item.href.split('#')[0];
+      return pathname === item.href.split("#")[0];
     }
-    
+
     // If we're on the home page, use the observed section
     if (activeSection) {
       return item.id === activeSection;
     }
-    
+
     // Default to home if no section is detected yet and we're on /
     return item.id === "home";
   };
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 shadow-md backdrop-blur-lg   ${
-        scrolled ? "bg-white/80 shadow-md" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-[#F8FBFF] shadow-lg backdrop-blur-lg py-3"
+          : "bg-[#F8FBFF] py-5"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <div className="">
+        <div className="transition-transform duration-300 hover:scale-105">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.svg"
               alt="logo"
               width={180}
               height={100}
-              className="cursor-pointer object-cover w-[150px] sm:w-[180px] md:w-[200px] lg:w-[230px] h-auto"
+              className="cursor-pointer object-contain w-[140px] sm:w-[160px] md:w-[180px] lg:w-[200px] h-auto"
             />
           </Link>
         </div>
 
         {/* ================= Desktop Menu ================= */}
-        <div className="hidden md:flex space-x-4 lg:space-x-8 font-medium">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
           {menuItems.map((item) => {
             const isActive = getIsActive(item);
 
@@ -122,34 +127,36 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative pb-1 transition-all duration-300 ${
+                className={`group relative text-sm lg:text-base font-semibold uppercase tracking-wider transition-all duration-300 ${
                   isActive
-                    ? "text-[#904ED4] font-semibold"
-                    : "text-[#904ED499] hover:text-[#904ED4]"
+                    ? "text-[#0E2F62]"
+                    : "text-[#0E2F62CC] hover:text-[#0E2F62]"
                 }`}
               >
                 {item.label}
 
-                {/* Active underline */}
-                {isActive && (
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-[#904ED4] rounded-full" />
-                )}
+                {/* Animated Underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#0E2F62] transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             );
           })}
         </div>
-
-     
 
         {/* ================= Mobile Menu ================= */}
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button
-                className="bg-white text-[#904ED4]"
+                size="icon"
+                variant="ghost"
+                className="transition-all duration-300 bg-[#0E2F62]/10 text-[#0E2F62] hover:bg-[#0E2F62]/20"
                 aria-label="Toggle menu"
               >
-                {open ? <X size={26} /> : <Menu size={26} />}
+                {open ? <X size={24} /> : <Menu size={24} />}
               </Button>
             </SheetTrigger>
 
@@ -165,21 +172,24 @@ export default function Navbar() {
                       onClick={(e) => {
                         setOpen(false);
                         // If clicking Home while already on Home, scroll to top
-                        if ((item.href === "/" || item.href === "/#home") && pathname === "/") {
+                        if (
+                          (item.href === "/" || item.href === "/#home") &&
+                          pathname === "/"
+                        ) {
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }
                       }}
                       className={`relative px-4 py-2 text-lg transition-all duration-300 ${
                         isActive
-                          ? "text-[#904ED4] font-semibold"
-                          : "text-[#904ED499] hover:text-[#904ED4]"
+                          ? "text-[#0E2F62] font-semibold"
+                          : "text-[#0E2F62CC] hover:text-[#0E2F62]"
                       }`}
                     >
                       {item.label}
 
                       {/* Active underline (mobile) */}
                       {isActive && (
-                        <span className="absolute left-4 -bottom-1 h-[2px] w-10 bg-[#904ED4] rounded-full" />
+                        <span className="absolute left-4 -bottom-1 h-[2px] w-10 bg-[#0E2F62] rounded-full" />
                       )}
                     </Link>
                   );

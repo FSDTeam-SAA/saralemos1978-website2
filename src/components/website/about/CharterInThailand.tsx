@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const CharterInThailand = () => {
@@ -7,7 +8,8 @@ const CharterInThailand = () => {
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           {/* Text Content */}
           <div className="w-full lg:w-[60%]">
-            <h2 className="text-3xl font-bold mb-6">
+            <span className="block w-14 h-0.5 bg-[#FF9002] mb-3" />
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               <span className="text-orange-500">Charter</span> in <span className="text-gray-800">Thailand</span>
             </h2>
             <p className="text-[#52525B] text-lg leading-relaxed mb-4">
@@ -22,9 +24,12 @@ const CharterInThailand = () => {
               charter experience possible, with insider knowledge of the best anchorages, restaurants, and
               attractions.
             </p>
+            <Link href={'/#contact'}>
+            
             <button className="bg-[#E8662A] cursor-pointer hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Plan Your Charter
             </button>
+            </Link>
           </div>
 
           {/* Image */}

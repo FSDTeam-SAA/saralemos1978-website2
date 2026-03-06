@@ -5,6 +5,12 @@ const HaveAQuestion = () => {
   return (
     <section className="my-10 md:my-16" id="contact">
       <div className="container mx-auto">
+            <span className="block w-14 h-0.5 bg-[#FF9002] mb-3" />
+
+        <h2 className=" text-3xl md:text-4xl text-[#E8662A] mb-6 font-bold text-start">
+          Holmes on Board — Helping you navigate Asia’s yachting world with
+          confidence.
+        </h2>
         <HaveQuestion
           title="Still Have "
           span="Question?"

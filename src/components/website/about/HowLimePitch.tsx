@@ -37,6 +37,7 @@ const HowLimePitch = () => {
       aria-labelledby="limepitch-heading"
     >
       {/* Background Image */}
+    
       <div className="absolute inset-0 -z-10">
         <Image
           src="/about/limepitch.png"
@@ -52,6 +53,8 @@ const HowLimePitch = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <header className="text-center mb-12">
+            <span className="block w-16 h-0.5 mx-auto bg-[#FF9002] mb-3" />
+
           <h2
             id="limepitch-heading"
             className="text-3xl md:text-4xl font-bold text-gray-800"
