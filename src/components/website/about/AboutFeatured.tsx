@@ -50,9 +50,9 @@ const AboutFeatured = () => {
           >
             Featured <span className="text-orange-500">Yacht Listings</span>
           </h2>
-          <p className="mt-2 max-w-2xl text-sm md:text-base text-gray-600">
-            Explore premium yachts available for sale or charter across
-            Southeast Asia through our trusted yacht brokerage network.
+          <p className="mt-2 max-w-5xl text-sm md:text-base text-gray-600">
+           Curated yachts for sale and charter, selected for quality, condition, and suitability for cruising in Southeast Asia.
+
           </p>
         </header>
 
