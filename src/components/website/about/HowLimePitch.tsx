@@ -50,7 +50,7 @@ const HowLimePitch = () => {
         <div className="absolute inset-0 bg-white/60" />
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         {/* Header */}
         <header className="text-center mb-12">
             <span className="block w-16 h-0.5 mx-auto bg-[#FF9002] mb-3" />
