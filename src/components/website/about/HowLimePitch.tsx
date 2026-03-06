@@ -62,7 +62,7 @@ const HowLimePitch = () => {
             How Lime Pitch{" "}
             <span className="text-orange-500">Powers Holmes On Board</span>
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-sm md:text-base text-gray-600">
+          <p className="mt-3 max-w-5xl mx-auto text-sm md:text-base text-gray-600">
             Holmes On Board is supported by Lime Pitch — an AI-driven marketing
             assistant built specifically for yacht professionals.
           </p>
