@@ -166,7 +166,7 @@ const Footer = () => {
 
         {/* Bottom Copyright */}
         <div className="text-center text-white/60 text-xs">
-          <p>© 2025 yacht AI. All rights reserved</p>
+          <p>© {new Date().getFullYear()} yacht AI. All rights reserved</p>
         </div>
       </div>
     </footer>
